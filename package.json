@@ -1,0 +1,12 @@
+{
+  "name": "headerparser",
+  "version": "1.0.0",
+  "description": "a parser for headers",
+  "main": "hp-app.js",
+  "author": "Lucas Dayton",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2"
+  }
+}
