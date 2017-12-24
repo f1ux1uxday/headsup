@@ -1,9 +1,11 @@
 const express = require('express')
 const cors = require('cors')
+const useragent = require('express-useragent')
 
 const app = module.exports = express()
 
 app.use(cors())
+app.use(useragent.express())
 
 app.set('port', process.env.PORT || 3333)
 
@@ -15,11 +17,12 @@ app.get('/', (request, response) => {
 app.get('/api/whoami', (request, response) => {
   let IP_ADDRESS = request.ip
   let USER_LANG = request.acceptsLanguages()
-  let SOFTWARE = request.headers['user-agent']
+  let requestAgent = request.useragent
+  let PLATFORM = `${requestAgent.os}, ${requestAgent.browser}`
   response.json({
     ip: IP_ADDRESS,
     language: USER_LANG[0],
-    software: SOFTWARE,
+    platform: SOFTWARE,
   })
 })
 

@@ -85,6 +85,10 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
 
+express-useragent@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/express-useragent/-/express-useragent-1.0.8.tgz#051ef6a3386d8ecb62cd2b8c169ad109d06cb57d"
+
 express@^4.16.2:
   version "4.16.2"
   resolved "https://registry.yarnpkg.com/express/-/express-4.16.2.tgz#e35c6dfe2d64b7dca0a5cd4f21781be3299e076c"
