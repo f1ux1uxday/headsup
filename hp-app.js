@@ -5,6 +5,8 @@ const app = module.exports = express()
 
 app.use(cors())
 
+app.set('port', process.env.PORT || 3333)
+
 app.get('/', (request, response) => {
   response.send('hello')
 })
@@ -22,6 +24,6 @@ app.get('/api/whoami', (request, response) => {
   })
 })
 
-app.listen(3000, () => {
+app.listen(app.get('port'), () => {
   console.log('served!')
 })

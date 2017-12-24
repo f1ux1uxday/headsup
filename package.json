@@ -1,10 +1,13 @@
 {
-  "name": "headerparser",
+  "name": "headsup-parser",
   "version": "1.0.0",
-  "description": "a parser for headers",
+  "description": "a parser for request headers",
   "main": "hp-app.js",
   "author": "Lucas Dayton",
   "license": "MIT",
+  "scripts": {
+    "start": "node hp-app.js"
+  },
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.16.2"
