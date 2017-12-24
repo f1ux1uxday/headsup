@@ -22,7 +22,7 @@ app.get('/api/whoami', (request, response) => {
   response.json({
     ip: IP_ADDRESS,
     language: USER_LANG[0],
-    platform: SOFTWARE,
+    platform: PLATFORM,
   })
 })
 
