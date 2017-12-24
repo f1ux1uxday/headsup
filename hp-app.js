@@ -8,17 +8,16 @@ app.use(cors())
 app.set('port', process.env.PORT || 3333)
 
 app.get('/', (request, response) => {
-  response.send('hello')
+  response.send(`To use this API, direct your browser to
+  headsup-parser.herokuapp.com/api/whoami`)
 })
 
 app.get('/api/whoami', (request, response) => {
   let IP_ADDRESS = request.ip
-  let HOSTNAME = request.hostname
   let USER_LANG = request.acceptsLanguages()
   let SOFTWARE = request.headers['user-agent']
   response.json({
     ip: IP_ADDRESS,
-    hostname: HOSTNAME,
     language: USER_LANG[0],
     software: SOFTWARE,
   })
